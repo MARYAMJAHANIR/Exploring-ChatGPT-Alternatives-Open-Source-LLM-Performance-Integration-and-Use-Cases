@@ -51,9 +51,9 @@ The main goal was to determine whether open-source models provide a **viable alt
 ## Step-by-Step Installation
 
 ### 1. Set up virtual environments (recommended) 
-* **For MetaGPT**
-- conda create -n metagpt python=3.11.4
-- conda activate metagpt
+# For MetaGPT
+conda create -n metagpt python=3.11.4
+conda activate metagpt
 
 # For AutoGen
 conda create -n autogen python=3.11.4
@@ -103,19 +103,34 @@ coder = autogen.AssistantAgent(
     llm_config={"config_list": config_list_codellama}
 )
 
+---
+
 ## 🚀 Use Cases & Results
 
-The primary use case was to generate a complete, playable game using a single prompt.
+This project explored how different AI frameworks and models perform on the task of **end-to-end game generation** from a single prompt.
 
-### With Open-Source Models (CodeLLAMA / Mistral)
-**Task**: `"write a CLI snake game based on pygame"`.
-**Outcome**: **Failure**.
-**Details**: The frameworks took a very long time and eventually timed out. Instead of producing code, they generated repetitive text about product goals, user stories, and competitive analysis. The Ollama server also produced memory allocation errors on a 16 GB RAM machine.
+### 🧪 Open-Source Models (CodeLLaMA / Mistral via Ollama)
+- **Prompt**:  
+  `"write a CLI snake game based on pygame"`
+- **Outcome**: ❌ **Failure**
+- **Details**:  
+  - Frameworks produced repetitive text outputs (product goals, user stories, competitive analysis) instead of executable code.  
+  - Long runtimes with no usable results.  
+  - Ollama server encountered **memory allocation errors** even on a 16 GB RAM system.  
 
-### With GPT-4 (via Azure OpenAI Service)
-**Task**: Prompts like `"Create a complete 2048 game based on pygame"` or `"Write a brick breaker based on pygame"`.
-**Outcome**: **Success**.
-**Details**: When MetaGPT was configured with an API key for GPT-4, it successfully generated the full, modular, and playable source code for multiple games.
+### 🔑 GPT-4 (via Azure OpenAI Service)
+- **Prompt Examples**:  
+  - `"Create a complete 2048 game based on pygame"`  
+  - `"Write a brick breaker based on pygame"`  
+- **Outcome**: ✅ **Success**
+- **Details**:  
+  - MetaGPT, configured with GPT-4, generated **full, modular, and playable source code**.  
+  - Games included **Snake, 2048, and Brick Breaker**, each runnable directly after code generation.  
+  - Output quality was robust, with structured files, comments, and reusable functions.  
+
+### 📊 Key Insight
+- Open-source LLMs (CodeLLaMA, Mistral) **struggled with complex multi-step generation** like building playable games.  
+- GPT-4 demonstrated **reliable code synthesis and framework orchestration**, producing end-to-end working solutions.
 
 ---
 
