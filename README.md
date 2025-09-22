@@ -48,13 +48,12 @@ The main goal was to determine whether open-source models provide a **viable alt
 
 ---
 
-### Step-by-Step Installation
+## Step-by-Step Installation
 
-**1. Set up virtual environments (recommended)**  
-```bash
-# For MetaGPT
-conda create -n metagpt python=3.11.4
-conda activate metagpt
+### 1. Set up virtual environments (recommended) 
+* **For MetaGPT**
+- conda create -n metagpt python=3.11.4
+- conda activate metagpt
 
 # For AutoGen
 conda create -n autogen python=3.11.4
