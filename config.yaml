@@ -1,0 +1,44 @@
+
+# DO NOT MODIFY THIS FILE, create a new key.yaml, define OPENAI_API_KEY.
+# The configuration of key.yaml has a higher priority and will not enter git
+
+#### if OpenAI
+
+# OPENAI_API_BASE: "http://0.0.0.0:8000"
+# # OPENAI_API_condMODEL: "gpt-4"
+# MAX_TOKENS: 1500
+# RPM: 3
+
+#### if AZURE, check https://github.com/openai/openai-cookbook/blob/main/examples/azure/chat.ipynb
+
+#OPENAI_API_TYPE: "azure"
+#OPENAI_API_BASE: "YOUR_AZURE_ENDPOINT"
+#OPENAI_API_KEY: "YOUR_AZURE_API_KEY"
+#OPENAI_API_VERSION: "YOUR_AZURE_API_VERSION"
+#DEPLOYMENT_ID: "YOUR_DEPLOYMENT_ID"
+OPENAI_API_TYPE: "azure"
+
+OPENAI_BASE_URL: "your url"
+
+OPENAI_API_KEY: "use you key:)"
+
+OPENAI_API_VERSION: "2023-05-15"
+
+DEPLOYMENT_NAME: "gpt-4"
+
+MODEL_NAME: "gpt-4"
+RPM: 10
+
+#### for Search
+
+## Visit https://serpapi.com/ to get key.
+#SERPAPI_API_KEY: "YOUR_API_KEY"
+## Visit https://console.cloud.google.com/apis/credentials to get key.
+#GOOGLE_API_KEY: "YOUR_API_KEY"
+## Visit https://programmablesearchengine.google.com/controlpanel/create to get id.
+#GOOGLE_CSE_ID: "YOUR_CSE_ID"
+
+#### for TTS
+
+#AZURE_TTS_SUBSCRIPTION_KEY: "YOUR_API_KEY"
+#AZURE_TTS_REGION: "eastus"
