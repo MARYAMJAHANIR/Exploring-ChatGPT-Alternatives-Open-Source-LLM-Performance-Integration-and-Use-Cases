@@ -62,7 +62,6 @@ conda activate autogen
 ## 🛠️ Installation & Setup
 
 ### 1. Install Frameworks
-```bash
 pip install metagpt
 pip install pyautogen
 
